@@ -1,10 +1,14 @@
 describe("Airport", function() {
-  var plane;
 
   beforeEach(function() {
+    plane = new Plane();
     airport = new Airport();
   });
 
-  it("is flying when created", function() {
-    expect(plane.isFlying).toBe(true);
+  it("can receive a plane", function() {
+    airport.receive(plane);
+    plane2 = airport.release();
+    expect(plane2.isFlying).toBe(true);
   });
+
+});

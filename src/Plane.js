@@ -10,9 +10,6 @@ Plane.prototype.takeOff = function() {
   this.isFlying = true;
 };
 
-var plane = new Plane();
-plane.land();
-console.log(plane.isFlying);
 
 // Plane.prototype.isFlying = function() {
 //   return this.isFlying;
