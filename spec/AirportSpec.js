@@ -1,7 +1,19 @@
 describe("Airport", function() {
+  console.log("test");
+
+  var plane;
 
   beforeEach(function() {
-    plane = new Plane();
+    plane = {
+      isFlying: true,
+      land: function() {
+        this.isFlying = false;
+      },
+      takeOff: function() {
+        this.isFlying = true;
+      }
+    }
+
     airport = new Airport();
   });
 
