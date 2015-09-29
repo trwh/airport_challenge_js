@@ -3,9 +3,12 @@ function Airport() {
 }
 
 Airport.prototype.receive = function(plane) {
+  plane.land();
   this.hangar.push(plane);
 };
 
 Airport.prototype.release = function() {
-  return this.hangar.pop();
+  plane = this.hangar.pop();
+  plane.takeOff();
+  return plane;
 };
